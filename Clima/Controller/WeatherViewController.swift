@@ -48,8 +48,11 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
         }
-        
         searchTextField.text = ""
+    }
+    
+    func didUpdateWeather(weather: WeatherModel) {
+        print(weather.temperature)
     }
     
 }
